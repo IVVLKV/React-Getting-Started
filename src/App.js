@@ -1,19 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import "./styles.css";
 
-import ButtonCounter from "./ButtonCounter";
+import Button from "./Button/Button";
+import GitHubCards from "./ClassComponent/";
 
 export default function App() {
-  //Button
-
-  const [counter, setCounter] = useState(0);
-  const incrementCounter = () => setCounter(counter + 1);
-
   return (
     <div className="App">
       <h1>Components Demos:</h1>
-      <ButtonCounter onClickFunction={incrementCounter} increment={1} />
-      <ButtonCounter onClickFunction={incrementCounter} increment={5} />
+      <div style={{ background: "#ddd", padding: "20px" }}>
+        <Button />
+      </div>
+
+      <div style={{ background: "#fff", padding: "20px" }}>
+        <GitHubCards title={"GitHub Cards!"} />
+      </div>
     </div>
   );
 }
